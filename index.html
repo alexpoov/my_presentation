@@ -46,32 +46,45 @@
 
 				</section>
 
-				<section id="intro" class="title-slide slide level1">
-					<h2>Introduction</h2>
-					<p>The goal of <strong>Fairness-aware Recommender Systems</strong> is to optimize the fairness constraints, rather than only optimizing for accuracy.</p>
-					<ul>
-						<li>On user's side: demographic/socio-economic data biases, increase trust on platform</li>
-						<li>On companies' side: suboptimal performance (e.g. activity bias), regulator obligations</li>
-					</ul>
-					<p>The design, implementation, and deployment of such systems require the active involvement of practitioners, regulators, and owners who hold essential responsibilities.</p>
+				<section>
+					<section id="intro" class="title-slide slide level1">
+						<h2>Introduction</h2>
+						<p>The goal of <strong>Fairness-aware Recommender Systems</strong> is to optimize the fairness constraints, rather than only optimizing for accuracy.</p>
+						<ul>
+							<li>preprocessing techniques s designed to modify the input data</li>
+							<li>algorithm modification techniques to create fair modeling under any inputs</li>
+							<li>postprocessing techniques that modify models outputs</li>
+						</ul>
+						<p>The design, implementation, and deployment of such systems require the active involvement of practitioners, regulators, and owners who hold essential responsibilities.</p>
+					</section>
+					<section id="intro2" class="slide level2">
+						<p>The motivation behind Fairness-aware algorithms:</p>
+						<ul>
+							<li>On user's side: demographic/socio-economic data biases, increase trust on platform</li>
+							<li>On companies' side: suboptimal performance (e.g. activity bias), regulator obligations, social responsibilitiy.</li>
+						</ul>
+					</section>
+					
 				</section>
 
 				<section>
 					<section id="dsr" class="title-slide slide level1">
 						<h2>Research Design</h2>
+						<P>A case of ads recommendations in VoD services</P>
+						<br>
 						<ul>
 							<li>Identifying unfairness in the algorithm:</li>
-							<p>System latency bias for items and discrimination of disadvantage groups for users.</p>
+							<p>System latency bias for items and discrimination of disadvantage groups for users. This could include: disproportional shows, targeting on protected attributes, user's activity bias.</p>
 							<br>
 							<li>Derive metrics for fairness evaluation</li>
-							<p>Equality of opportunity, demographic parity, user-oriented group fairness, etc.</p>
+							<p>Deriving fairness metrics - this step has several well-performed practices (i.e. demographic parity, equity of opportunity), but it should be separately formulated for specific platform's needs.</p>
 						</ul>
 					</section>
 	
 					<section id="dsr2" class="slide level2">
 						<ul>
 							<li>Integrating fairness constraints into the algorithm</li>
-							<p>Constraint-based optimization, regularization over model predictions.</p>
+							<p>Constraint-based optimization: regularization over model predictions, adversarial learning.</p>
 							<br>
 							<li>Results validation</li>
 							<ul>
@@ -90,14 +103,9 @@
 				<section>
 					<section id="current" class="title-slide slide level1">
 						<h2>Parallels with current research</h2>
-						<div class="container">
-							<div class="col">
-								<p> Implementation of Self-Deployed Behavioural Interventions in Educational Decision-Making under Uncertainty </p>
-							</div>
-							<div class="col">
-								<img src="img/plug.png">
-							</div>
-						</div>
+						<p> Implementation of Self-Deployed Behavioural Interventions in Educational Decision-Making under Uncertainty </p>
+						<br>
+						<p>In this work the challenges of decision-making in the field of education are discussed. It is assumed that Integrating self-deployed behavioural interventions into the design of educational systems can improve awareness and transparency of decision-making experience. We plan to construct a framework with user experiment  to model (statically and dynamically) user's behaviour and test the effectiveness of different behavioural interventions in designing learning systems.</p>
 					</section>
 
 					<section id="present2" class="slide level2">
@@ -119,6 +127,13 @@
 						<ul>
 							<li>Veronika Bogina;Alan Hartman;Tsvi Kuflik;Avital Shulner-Tal; (2021). Educating Software and AI Stakeholders About Algorithmic Fairness, Accountability, Transparency and Ethics . International Journal of Artificial Intelligence in Education, (), –. doi:10.1007/s40593-021-00248-0</li>
 							<li>Geyik, Sahin Cem; Ambler, Stuart; Kenthapadi, Krishnaram (2019). Fairness-Aware Ranking in Search & Recommendation Systems with Application to LinkedIn Talent Search. Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining - KDD '19, (), 2221–2231. doi:10.1145/3292500.3330691</li>
+						</ul>
+					</section>
+
+					<section id="ref1" class="slide level2">
+						<ul>
+							<li>McInerney, James; Lacker, Benjamin; Hansen, Samantha; Higley, Karl; Bouchard, Hugues; Gruson, Alois; Mehrotra, Rishabh (2018). [ACM Press the 12th ACM Conference - Vancouver, British Columbia, Canada (2018.10.02-2018.10.02)] Proceedings of the 12th ACM Conference on Recommender Systems - RecSys '18 - Explore, exploit, and explain. , (), 31–39. doi:10.1145/3240323.3240354</li>
+							<li>Lin, Xiao; Chen, Hongjie; Pei, Changhua; Sun, Fei; Xiao, Xuanji; Sun, Hanxiao; Zhang, Yongfeng; Ou, Wenwu; Jiang, Peng (2019). Proceedings of the 13th ACM Conference on Recommender Systems - RecSys '19 - A pareto-efficient algorithm for multiple objective optimization in e-commerce recommendation. , (), 20–28. doi:10.1145/3298689.3346998</li>
 						</ul>
 					</section>
 
