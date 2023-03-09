@@ -31,11 +31,6 @@
 				}
 		</style>
 
-<!-- Prepare a few slides about yourself, your past/current research, 
-	and other relevant background for this position. 
-	Aim for a max ~10 minutes presentation.
-\ -->
-
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css">
 	</head>
@@ -44,145 +39,87 @@
 			<div class="slides">
 				
 				<section id="title-slide">
-					<div class=container>
-						<div class="col">
-							<br>
-							<br>
-							<h1 class="title">Hi, I'm Sasha</h1>
-							<p class="subtitle">and here presentation</p>
-							<p class="subtitle">about me, myself </p>
-							<p class="subtitle">and my experience</p>
-							<br>
-
-							<p class="date">24.02.2023</p>
-						</div>
-						<div class="col">
-							<img src="img/portrait1.png" alt="portrait1", height="500px">
-						</div>
-					</div>
-					
-					
-				  </section>
-
-				<section>
-
-					<section id="edu" class="title-slide slide level1">
-						<h2>Education</h2>
-					</section>
-					
-
-					<section id="edu-cv" class="slide level2">
-						<p>B.Sc. in <a href="https://spb.hse.ru/en/ba/economics/">Economics</a> - Higher School of Economics'21</p> 
-						<ul>
-							<li class="fragment">Subjects: Linear Algebra, Advanced Calculus, Econometrics, Statistics, Probabilistic Theory, Games Theory, Behavioural Economics;</li>
-							<li class="fragment">Thesis: Probablistic modeling of programming technologies stacks market demand.</li>
-						</ul>
-						<br>
-						<p>M.Sc. in <a href="https://spb.hse.ru/ma/computer/">InfSys and HCI</a> - Higher School of Economics'23</p>
-						<ul>
-							<li class="fragment">Subjects: Analytical Systems Architecture, Modern Methods of Data Analysis, Modern Methods of Decision Making, Recommender Systems;</li>
-							<li class="fragment">Thesis: Implementation of Self-Deployed Behavioural Interventions in Educational Decision-Making.</li>
-						</ul>
-					</section>
-
-					<section id="bsc-thesis" class="slide level2">
-						<h2>Probablistic modeling of programming technologies stacks market demand</h2>
-						<ul>
-							<li class="fragment">Testing the evaluation the demand on Informational Technologies tech stacks for business probabilistically;</li>
-							<li class="fragment">Mixing probabilities with the Expected Utility framework to translate the results of the ML process into monetary terms;</li>
-							<li class="fragment">Case scenarios: What-If analysis of hypothetical business strategic goals.</li>
-						</ul>
-					</section>
-
-					<section id="bsc-thesis2" class="slide level2">
-						<img src="img/inf.png" alt="inference diagram", height="500px">
-					</section>
-
-					<section id="bsc-thesis3" class="slide level2">
-						<img src="img/compa.png" alt="inference diagram", height="500px">
-					</section>
-
-					<section id="msc-thesis" class="slide level2">
-						<h2>Implementation of Self-Deployed Behavioural Interventions in Educational Decision-Making</h2>
-						<ul>
-							<li class="fragment">Interconnection of Information Systems Design and Behavioral Science via interventions;</li>
-							<li class="fragment">Different ways of modeling user's behaviour (MAB, BN) to tune experimental environment;</li>
-							<li class="fragment">Increasing of awareness and transparency of decision-making process for users (in educational systems)</li>
-						</ul>
-					</section>
+			
+					<h1 class="title">Strategies and Experiments on Fair and Transparent Recommendations</h1>
+					<p class="subtitle">Aleksandr Popov</p>
+					<p class="date">09.03.23</p>
 
 				</section>
 
-				<section>
-					<section id="research" class="title-slide slide level1">
-						<h1>Research</h1>
-					</section>
-
-					<section id="mosc" class="slide level2">
-						<h2>Machine Learning and Social Computing Research Group</h2>
-						<p class="subtitle">Jan - Dec '20 (<a href="https://spb.hse.ru/en/fmcs/math/sociocomp/">link</a>)</p>
-						<br>
-						<p class="fragment">Developing machine learning and network science methods in social computing settings, employed to analyze data from various Social Network sites and other online platforms.</p>
-						</ul>
-					</section>
-
-					<section id="slon" class="slide level2">
-						<h2>Laboratory of Sociology in Education and Science</h2>
-						<p class="subtitle">Since Oct'22 (<a href="https://slon.hse.ru/en/">link</a>)</p>
-						<br>
-						<p class="fragment">Studying the potential of Virtual Labs (crowdsourced experiments) implementations to study preferences, fears and expectations of students while elective choosing process. </p>
-					</section>
-
-					<section id="slon2" class="slide level2">
-						<img src="img/vlab.png" alt="vlab", height="500px">
-					</section>
-
+				<section id="intro" class="title-slide slide level1">
+					<h2>Introduction</h2>
+					<p>The goal of <strong>Fairness-aware Recommender Systems</strong> is to optimize the fairness constraints, rather than only optimizing for accuracy.</p>
+					<ul>
+						<li>On user's side: demographic/socio-economic data biases, increase trust on platform</li>
+						<li>On companies' side: suboptimal performance (e.g. activity bias), regulator obligations</li>
+					</ul>
+					<p>The design, implementation, and deployment of such systems require the active involvement of practitioners, regulators, and owners who hold essential responsibilities.</p>
 				</section>
 
+				<section>
+					<section id="dsr" class="title-slide slide level1">
+						<h2>Research Design</h2>
+						<ul>
+							<li>Identifying unfairness in the algorithm:</li>
+							<p>System latency bias for items and discrimination of disadvantage groups for users.</p>
+							<br>
+							<li>Derive metrics for fairness evaluation</li>
+							<p>Equality of opportunity, demographic parity, user-oriented group fairness, etc.</p>
+						</ul>
+					</section>
+	
+					<section id="dsr2" class="slide level2">
+						<ul>
+							<li>Integrating fairness constraints into the algorithm</li>
+							<p>e.g. tuning ranking algorithm to optimize both relevance and fairness.</p>
+							<br>
+							<li>Results validation</li>
+							<ul>
+								<li>offline: direct evaluation or simulation based on distribution of protected attributes;</li>
+								<li>online: A/B testing to make sure that buisness metics (CTR, VTR, conversion rates) are satisfied.</li>
+							  </ul>
+						</ul>
+					</section>
+				</section>
+
+				<section id="present" class="title-slide slide level1">
+					<h2>Presentation Strategies</h2>
+					<p> Presentation in the form of banners, pre- and mid-rolls or pop-ups can be an element of the experimental loop, as advertising attributes can be set as additional optimisation parameters (e.g. intelligent partial pooling) within existing framework.</p>
+				</section>
 
 				<section>
-					<section id="Teaching" class="title-slide slide level1">
-						<h1>Teaching</h1>
-					</section>
-
-					<section id="minor" class="slide level2">
-						<h2>Data Science Minor (R)</h2>
-						<p class="subtitle"> (<a href="https://electives.hse.ru/minor_data_spb/">link</a>)</p>
-						<br>
-						<ul>
-							<li class="fragment">Teaching Assistant: Sep'19 - Jun'21 </li>
-							<li class="fragment">Guest Lecturer since Sep'21</li>
-							<li class="fragment">The minor covers all stages of working with data (scrapping, aggregation, visualisation, modeling, interpretation, NLP and RecSys) and train competencies to apply these skills in domain field of study (major).</li>
-						</ul>
-					</section>
-
-					<section id="pol" class="slide level2">
-						<h2>Python for Social Sciences (Python)</h2>
-						<p class="subtitle">Lecturer: Sep - Dec '22 (<a href="https://spb.hse.ru/en/ba/political/courses/646536989.html">link</a>)</p>
-						<br>
-						<ul>
-							<li class="fragment">To give students a comprehensive overview of the Python programming language</li>
-							<li class="fragment">To develop basic skills of programming in Python</li>
-							<li class="fragment">To introduce students to the concept of Computational Social Science and suggest ways to integrate computational approaches into their study/research activities.</li>
-						</ul>
-					</section>
-
-					<section id="pol_pos" class="slide level2">
+					<section id="current" class="title-slide slide level1">
+						<h2>Parallels with current research</h2>
 						<div class="container">
 							<div class="col">
-								<img src="img/posterr.jpg" alt="poster", height="500px">
+								<p> Implementation of Self-Deployed Behavioural Interventions in Educational Decision-Making under Uncertainty </p>
 							</div>
 							<div class="col">
-								<p>Aleksandr D. Popov. 2022. Motivation and Practices of Teaching Computational Social Science to Undergraduate Political Science Students. In Proceedings of the 54th ACM Technical Symposium on Computer Science Education (Toronto, ON, Canada) (SIGCSE ’22). Association for Computing Machinery, New York, NY, USA, 1368. https://doi.org/10.1145/3545947.3576321</p>
+								<img src="img/plug.png">
 							</div>
 						</div>
 					</section>
 
+					<section id="present2" class="slide level2">
+						<ul>
+							<li>Decision-making problem optimization for two-sided digital platform: students and study office managers</li>
+							<li>Preference elicitation based on user's interactions and item's metadata</li>
+							<li>Dynamic modelling of behaviour for consequent Bayesian optimisation</li>
+						</ul>
+					</section>
 				</section>
 
-				<section>
+				<section id="ref" class="title-slide slide level1">
+					<h2>References</h2>
+					<ul>
+						<li>ref1</li>
+						<li>ref2</li>
+						<li>ref3</li>
+					</ul>
+				</section>
+
+				<section id="thx" class="title-slide slide level1">
 					<h2>Thank you for your attention!</h2>
-					<p>Please contact me if you have any questions: alexpoov99@gmail.com</p>
 				</section>
 
 			</div>
