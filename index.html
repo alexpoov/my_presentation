@@ -40,57 +40,51 @@
 				
 				<section id="title-slide">
 			
-					<h1 class="title">Strategies and Experiments on Fair and Transparent Recommendations</h1>
+					<h1 class="title">Experiments and Strategies on Fair and Transparent Recommendations</h1>
 					<p class="subtitle">Aleksandr Popov</p>
-					<p class="date">09.03.23</p>
+					<p class="date">27.03.23</p>
 
 				</section>
 
 				<section>
 					<section id="intro" class="title-slide slide level1">
 						<h2>Introduction</h2>
-						<p>The goal of <strong>Fairness-aware Recommender Systems</strong> is to optimize the fairness constraints, rather than only optimizing for accuracy.</p>
+						<p>The process of <strong>fair and transparent recommendations</strong> as a interactive sequential decision-making problem:</p>
 						<ul>
-							<li>preprocessing techniques are designed to modify the input data</li>
-							<li>algorithm modification techniques to create fair modeling under any inputs</li>
-							<li>postprocessing techniques to modify models outputs</li>
+							<li>exploiting user models while exploring better ways to model their preferences</li>
+							<li>a lot of uncertainty factors: cold start, contextual changes, dynamism of preferences, etc.</li>
+							<li>optimizing both performance metrics and fairness constraints in interpretable way</li>
 						</ul>
-						<p>The design, implementation, and deployment of such systems require the active involvement of practitioners, regulators, and owners who hold essential responsibilities.</p>
 					</section>
 					<section id="intro2" class="slide level2">
 						<p>The motivation behind Fairness-aware algorithms:</p>
 						<ul>
-							<li>On user's side: demographic/socio-economic data biases, increase trust on platform</li>
-							<li>On companies' side: suboptimal performance (e.g. activity bias), regulator obligations, social responsibilitiy.</li>
+							<li>On user's side: demographic/socio-economic data biases, increase trust on platform, homogeneity </li>
+							<li>On companies' side: suboptimal performance (e.g. activity bias), regulator obligations, social responsibility.</li>
 						</ul>
+						<br>
 					</section>
-					
 				</section>
 
 				<section>
-					<section id="dsr" class="title-slide slide level1">
-						<h2>Research Design</h2>
-						<P>A case of ads recommendations in VoD services</P>
-						<br>
+					<section id="fars" class="title-slide slide level1">
+						<h2>Fairness-aware Recommender Systems</h2>
 						<ul>
-							<li>Identifying unfairness in the algorithm:</li>
-							<p>System latency bias for items and discrimination of disadvantage groups for users. This could include: disproportional shows, targeting on protected attributes, user's activity bias.</p>
-							<br>
-							<li>Derive metrics for fairness evaluation</li>
-							<p>Deriving fairness metrics - this step has several well-performed practices (i.e. demographic parity, equity of opportunity), but it should be separately formulated for specific platform's needs.</p>
+							<li>preprocessing (input data), algorithmic (fair modeling) and postprocessing (outputs) techniques.</li>
+							<li>multi-objective optimisation methods to meet all stakeholder's demands</li>
+							<li>scalable and high-level personalised outputs</li>
 						</ul>
 					</section>
-	
-					<section id="dsr2" class="slide level2">
+
+				</section>
+
+				<section>
+					<section id="mab" class="title-slide slide level1">
+						<h2>Bandits in Recommender Systems</h2>
 						<ul>
-							<li>Integrating fairness constraints into the algorithm</li>
-							<p>Constraint-based optimization: regularization over model predictions, adversarial learning.</p>
-							<br>
-							<li>Results validation</li>
-							<ul>
-								<li>offline: direct evaluation on data or simulation based on distribution of protected attributes;</li>
-								<li>online: A/B testing to make sure that buisness metics (CTR, VTR, conversion rates) are satisfied.</li>
-							  </ul>
+							<li>parametrisation of user behaviour to tune exploration scenarios</li>
+							<li>statistical modelling of uncertainty in case of bigger target metrics variation</li>
+							<li>easy integration and validation in the product environment</li>
 						</ul>
 					</section>
 				</section>
@@ -98,6 +92,44 @@
 				<section id="present" class="title-slide slide level1">
 					<h2>Presentation Strategies</h2>
 					<p> Presentation in the form of banners, pre- and mid-rolls or pop-ups can be an element of the experimental loop, as advertising attributes can be set as additional optimisation parameters (e.g. intelligent partial pooling) within existing framework.</p>
+				</section>
+
+				<section>
+					<section id="dsr" class="title-slide slide level1">
+						<h2>Research Design</h2>
+						<P>A case of ads recommendations in VoD services</P>
+						<br>
+						<img src="img/loop.png">
+					</section>
+	
+					<section id="dsr2" class="slide level2">
+						<p>Implementation</p>
+						<br>
+						<ul>
+							<li>EDA: identifying discrimination potential on current data</li>
+							<li>Deriving a fairness metrics to optimize</li>
+							<li>Pick the optimisation strategy to balance exploration and exploitation phases</li> 
+						</ul>
+					</section>
+
+					<section id="dsr3" class="slide level2">
+						<p>Offline Validation</p>
+						<br>
+						<ul>
+							<li>Generate data based on historical distributions</li>
+							<li>Run optimization to build surrogate model, accept parameters once target metrics is optimized</li>
+							<li>(add.) Compare resulting algorithms with others on different cohorts of users, or build and ensemble model</li> 
+						</ul>
+					</section>
+
+					<section id="dsr4" class="slide level2">
+						<p>Online Testing</p>
+						<br>
+						<ul>
+							<li>Integrating the model to the product</li>
+							<li>Monitoring key KPIs to complete business constraints</li> 
+						</ul>
+					</section>
 				</section>
 
 				<section>
@@ -141,7 +173,21 @@
 						<ul>
 							<li>Yunqi Li;Hanxiong Chen;Zuohui Fu;Yingqiang Ge;Yongfeng Zhang; (2021). User-oriented Fairness in Recommendation . Proceedings of the Web Conference 2021, (), –. doi:10.1145/3442381.3449866</li>
 							<li>Kumar, Subodha; Tan, Yinliang (Ricky); Wei, Lai (2020). When to Play Your Advertisement? Optimal Insertion Policy of Behavioral Advertisement. Information Systems Research, (), isre.2019.0904–. doi:10.1287/isre.2019.0904 </li>
-							<li>Burke, R. (2017). Multisided fairness for recommendation. arXiv preprint arXiv:1707.00093</li>
+						</ul>
+					</section>
+
+					<section id="ref3" class="slide level2">
+						<ul>
+							<li>David Sweet. 2022. Experimentation for Engineers (8th ed.). Manning Publications.</li>
+							<li>Himan Abdollahpouri, Shaghayegh Sahebi, Mehdi Elahi, Masoud Mansoury, Babak Loni, Zahra Nazari, and Maria Dimakopoulou. 2022. MORS 2022: The Second Workshop on Multi-Objective Recommender Systems. In Proceedings of the 16th ACM Conference on Recommender Systems (RecSys '22). Association for Computing Machinery, New York, NY, USA, 658–660. https://doi.org/10.1145/3523227.3547410</li>
+							<li>Yong Zheng and David (Xuejun) Wang. 2022. A survey of recommender systems with multi-objective optimization. Neurocomput. 474, C (Feb 2022), 141–153. https://doi.org/10.1016/j.neucom.2021.11.041</li>
+						</ul>
+					</section>
+
+					<section id="ref4" class="slide level2">
+						<ul>
+							<li>Masoud Mansoury. 2021. Fairness-Aware Recommendation in Multi-Sided Platforms. In Proceedings of the 14th ACM International Conference on Web Search and Data Mining (WSDM '21). Association for Computing Machinery, New York, NY, USA, 1117–1118. https://doi.org/10.1145/3437963.3441672</li>
+							<li>Masoud Mansoury, Himan Abdollahpouri, Mykola Pechenizkiy, Bamshad Mobasher, and Robin Burke. 2020. Feedback Loop and Bias Amplification in Recommender Systems. In Proceedings of the 29th ACM International Conference on Information &amp; Knowledge Management (CIKM '20). Association for Computing Machinery, New York, NY, USA, 2145–2148. https://doi.org/10.1145/3340531.3412152</li>
 						</ul>
 					</section>
 				</section>
